@@ -1,0 +1,40 @@
+{
+  "name": "@kalavruksha/bootstrap",
+  "version": "1.0.0",
+  "description": "Repository Bootstrap Generator for Kalavruksha ERP",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+
+  "main": "./dist/index.js",
+
+  "files": [
+    "dist"
+  ],
+
+  "engines": {
+    "node": ">=22.0.0"
+  },
+
+  "scripts": {
+    "clean": "rimraf dist output logs temp",
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "bootstrap": "npm run build && npm run start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+
+  "dependencies": {},
+
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "eslint": "^9.20.1",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

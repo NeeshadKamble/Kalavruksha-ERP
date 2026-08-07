@@ -1,0 +1,29 @@
+# Node
+node_modules/
+
+# Build
+dist/
+
+# Bootstrap
+tools/bootstrap/output/
+tools/bootstrap/logs/
+tools/bootstrap/temp/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# TypeScript
+*.tsbuildinfo
