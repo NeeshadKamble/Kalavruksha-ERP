@@ -8,10 +8,18 @@ export enum DiagnosticSeverity {
 
 }
 
+/**
+ * Compiler diagnostic.
+ */
 export interface Diagnostic {
 
     /**
-     * Diagnostic severity.
+     * Optional diagnostic identifier.
+     */
+    code?: string;
+
+    /**
+     * Severity.
      */
     severity: DiagnosticSeverity;
 
@@ -21,13 +29,38 @@ export interface Diagnostic {
     message: string;
 
     /**
-     * Optional manifest file name.
+     * Absolute source file.
+     */
+    file?: string;
+
+    /**
+     * Manifest name.
      */
     manifest?: string;
 
     /**
-     * Optional line number.
+     * Line number (1-based).
      */
     line?: number;
+
+    /**
+     * Column number (1-based).
+     */
+    column?: number;
+
+    /**
+     * Character offset.
+     */
+    offset?: number;
+
+    /**
+     * Length of the affected span.
+     */
+    length?: number;
+
+    /**
+     * Optional suggested fix.
+     */
+    suggestion?: string;
 
 }

@@ -17,6 +17,7 @@
   },
 
   "scripts": {
+    "dev:lexer": "tsx src/dev.ts",
     "clean": "rimraf dist output logs temp",
     "build": "tsc -p tsconfig.json",
     "dev": "tsx watch src/index.ts",
